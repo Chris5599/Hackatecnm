@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <title>Sonora — Bandas locales para tu evento</title>
+    <meta name="description" content="Descubre, reserva y paga de forma segura a bandas locales. Sin intermediarios, sin complicaciones." />
+
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Tipografía Inter (la misma que usaba next/font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css?v=7" />
+  </head>
+  <body>
+    <div class="shell">
+      <div id="app"></div>
+    </div>
+
+    <noscript>Sonora necesita JavaScript para funcionar.</noscript>
+
+    <!-- Supabase JS v2 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+    <!-- ethers v6: pagos con los smart contracts -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+
+    <!-- App -->
+    <script src="js/config.js?v=7"></script>
+    <script src="js/icons.js?v=7"></script>
+    <script src="js/demo-data.js?v=7"></script>
+    <script src="js/api.js?v=7"></script>
+    <script src="js/web3.js?v=7"></script>
+    <script src="js/app.js?v=7"></script>
+  </body>
+</html>

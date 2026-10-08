@@ -1,0 +1,456 @@
+{
+  "_nota": "Datos de bandas para la demo. content_hash vacio = el script usa un hash de ejemplo. Para usar el hash real del archivo: shasum -a 256 archivo y pegar 0x + resultado.",
+  "demo_rate": "1 MXN = 0.00000001 ETH (tasa simbolica de testnet)",
+  "bands": [
+    {
+      "name": "Conjunto Río Sacramento",
+      "genre": "Norteño-Sax",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Agrupación tradicional que mantiene vivo el clásico estilo chihuahuense del acordeón y el saxofón, ideales para polkas y huapangos.",
+      "fee_mxn": 18000,
+      "event_types": [
+        "Bodas",
+        "XV años",
+        "ferias patronales",
+        "charreadas"
+      ],
+      "member_names": [
+        "Carlos \"El Charly\" Mendoza",
+        "Luis Rivas",
+        "Martín Valles",
+        "José Álvarez",
+        "Raúl Sotelo"
+      ],
+      "member_roles": [
+        "Primera voz y Bajo Sexto",
+        "Acordeón",
+        "Saxofón",
+        "Bajo Eléctrico",
+        "Batería"
+      ],
+      "member_shares_bps": [
+        2500,
+        2500,
+        2000,
+        1500,
+        1500
+      ],
+      "song_title": "Polka del Sacramento",
+      "song_price_mxn_cents": 1500,
+      "audio_file": "polka_sacramento_master.mp3",
+      "author_indexes": [
+        0,
+        1
+      ],
+      "author_shares_bps": [
+        6000,
+        4000
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Los Plebes del Cerro Grande",
+      "genre": "Sierreño Campirano",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Trío sierreño con guitarras campiranas y requinto, especializados en corridos y baladas románticas para un ambiente más íntimo.",
+      "fee_mxn": 8500,
+      "event_types": [
+        "Fiestas privadas",
+        "reuniones de patio",
+        "bares",
+        "cantinas"
+      ],
+      "member_names": [
+        "Saúl \"El Zurdo\" Reyes",
+        "Fernando Castro",
+        "Diego \"El Tío\" Gómez"
+      ],
+      "member_roles": [
+        "Requinto y Segunda Voz",
+        "Primera Voz y Guitarra Armonía",
+        "Bajo Acústico (Tololoche)"
+      ],
+      "member_shares_bps": [
+        3400,
+        3300,
+        3300
+      ],
+      "song_title": "Corrido del 46",
+      "song_price_mxn_cents": 1200,
+      "audio_file": "corrido_46_mix.wav",
+      "author_indexes": [
+        1
+      ],
+      "author_shares_bps": [
+        10000
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Banda La Calicanto",
+      "genre": "Banda Estilo Sinaloense",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Banda grande y estruendosa adaptada al gusto chihuahuense, con un repertorio que mezcla cumbias, corridos y sones tradicionales.",
+      "fee_mxn": 35000,
+      "event_types": [
+        "Bailes masivos",
+        "rodeos",
+        "clausuras",
+        "mayordomías"
+      ],
+      "member_names": [
+        "Roberto \"Beto\" Llanos",
+        "Arturo Vega",
+        "Miguel Soto",
+        "Óscar Ponce",
+        "Manuel Díaz"
+      ],
+      "member_roles": [
+        "Vocalista Principal",
+        "Tuba",
+        "Clarinete Primero",
+        "Trompeta",
+        "Tarola y Tambora"
+      ],
+      "member_shares_bps": [
+        3000,
+        2000,
+        2000,
+        1500,
+        1500
+      ],
+      "song_title": "Cumbia de la Cantera",
+      "song_price_mxn_cents": 1800,
+      "audio_file": "cumbia_cantera_radio.mp3",
+      "author_indexes": [
+        0,
+        1
+      ],
+      "author_shares_bps": [
+        5000,
+        5000
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Los Reyes de la 20",
+      "genre": "Cumbia Norteña",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Reyes indiscutibles de las pistas de baile de la ciudad, fusionando el sabor de la cumbia con la instrumentación del norteño.",
+      "fee_mxn": 14000,
+      "event_types": [
+        "Salones de baile",
+        "aniversarios",
+        "fiestas de colonias"
+      ],
+      "member_names": [
+        "Javier \"Javi\" Montes",
+        "Hugo Cárdenas",
+        "Sergio \"Checo\" Ruiz",
+        "Tomás Salgado",
+        "Iván Torres"
+      ],
+      "member_roles": [
+        "Voz Principal",
+        "Teclados",
+        "Bajo Sexto",
+        "Bajo Eléctrico",
+        "Güiro y Percusiones"
+      ],
+      "member_shares_bps": [
+        2000,
+        2000,
+        2000,
+        2000,
+        2000
+      ],
+      "song_title": "Bailando en el Palomar",
+      "song_price_mxn_cents": 1500,
+      "audio_file": "bailando_palomar.wav",
+      "author_indexes": [
+        1,
+        0
+      ],
+      "author_shares_bps": [
+        7000,
+        3000
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Rodeo 614",
+      "genre": "Country / Norteño",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Agrupación que captura la esencia vaquera de Chihuahua, tocando versiones en español de country clásico y huapangos norteños.",
+      "fee_mxn": 16000,
+      "event_types": [
+        "Festivales country",
+        "rodeos",
+        "bares temáticos",
+        "bodas campestres"
+      ],
+      "member_names": [
+        "David \"El Vaquero\" Luján",
+        "Esteban Mora",
+        "Ramón Domínguez",
+        "Julio Ortega"
+      ],
+      "member_roles": [
+        "Voz y Guitarra Acústica",
+        "Fiddle (Violín)",
+        "Steel Guitar",
+        "Batería"
+      ],
+      "member_shares_bps": [
+        3000,
+        3000,
+        2000,
+        2000
+      ],
+      "song_title": "Cabalgata al Atardecer",
+      "song_price_mxn_cents": 1900,
+      "audio_file": "cabalgata_atardecer.mp3",
+      "author_indexes": [
+        0,
+        1
+      ],
+      "author_shares_bps": [
+        8000,
+        2000
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Escuadrón del Desierto",
+      "genre": "Norteño-Banda",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "El híbrido perfecto entre la fuerza de la tuba y la agilidad del acordeón, enfocados en corridos modernos y música bélica.",
+      "fee_mxn": 22000,
+      "event_types": [
+        "Palenques",
+        "fiestas privadas",
+        "eventos VIP",
+        "antros"
+      ],
+      "member_names": [
+        "Víctor Salas",
+        "Eduardo \"Lalo\" Treviño",
+        "Héctor \"El Compa\" Macías",
+        "Alejandro Perea",
+        "Simón Valdés",
+        "Mario Silva"
+      ],
+      "member_roles": [
+        "Primera Voz",
+        "Acordeón",
+        "Tuba",
+        "Bajo Sexto",
+        "Tarolas",
+        "Animador y Percusiones"
+      ],
+      "member_shares_bps": [
+        2000,
+        2000,
+        1500,
+        1500,
+        1500,
+        1500
+      ],
+      "song_title": "Rutas de Polvo",
+      "song_price_mxn_cents": 2000,
+      "audio_file": "rutas_de_polvo_final.mp3",
+      "author_indexes": [
+        0,
+        1,
+        2
+      ],
+      "author_shares_bps": [
+        3400,
+        3300,
+        3300
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Mariachi Los Dorados",
+      "genre": "Mariachi Tradicional",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Mariachi de gala con arreglos sobrios y potentes, infaltable para las serenatas en las frías noches de la capital.",
+      "fee_mxn": 12000,
+      "event_types": [
+        "Serenatas",
+        "misas",
+        "bodas formales",
+        "eventos corporativos"
+      ],
+      "member_names": [
+        "Gerardo \"Gerry\" Quintana",
+        "Roberto Flores",
+        "Luis \"Lucho\" Parra",
+        "Francisco Márquez",
+        "Daniel Ceballos",
+        "Pedro Ávila"
+      ],
+      "member_roles": [
+        "Voz y Guitarrón",
+        "Vihuela",
+        "Guitarra",
+        "Trompeta 1",
+        "Trompeta 2",
+        "Violín"
+      ],
+      "member_shares_bps": [
+        2500,
+        1500,
+        1500,
+        1500,
+        1500,
+        1500
+      ],
+      "song_title": "El Son de Santa Rita",
+      "song_price_mxn_cents": 1000,
+      "audio_file": "son_santa_rita_mariachi.wav",
+      "author_indexes": [
+        0,
+        3,
+        5
+      ],
+      "author_shares_bps": [
+        5000,
+        2500,
+        2500
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Los de la Cantera",
+      "genre": "Sierreño con Tuba",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Innovadores del género sierreño al sustituir el bajo acústico por una tuba, dándole un peso profundo a sus canciones románticas.",
+      "fee_mxn": 11500,
+      "event_types": [
+        "Fiestas universitarias",
+        "tocadas en terrazas",
+        "bares de moda"
+      ],
+      "member_names": [
+        "Andrés Solís",
+        "Marcos \"El Chino\" Leyva",
+        "Guillermo Ríos",
+        "Paco Zúñiga"
+      ],
+      "member_roles": [
+        "Primera Voz y Requinto",
+        "Tuba",
+        "Armonía (Guitarra de 12 cuerdas)",
+        "Segunda Voz"
+      ],
+      "member_shares_bps": [
+        3000,
+        2500,
+        2500,
+        2000
+      ],
+      "song_title": "El Patrón del Norte",
+      "song_price_mxn_cents": 1500,
+      "audio_file": "patron_del_norte.mp3",
+      "author_indexes": [
+        0
+      ],
+      "author_shares_bps": [
+        10000
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Los Cardenales del Chuviscar",
+      "genre": "Norteño Tradicional",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Apegados a la vieja escuela, tocan norteño puro con acordeón de botones, bajo sexto, bajo y batería. Especialistas en música de cantina.",
+      "fee_mxn": 9000,
+      "event_types": [
+        "Cantinas tradicionales",
+        "fiestas familiares",
+        "domingos de carne asada"
+      ],
+      "member_names": [
+        "Rubén \"Ramiro\" Santos",
+        "Felipe \"Pipe\" Nájera",
+        "Ernesto Castillo",
+        "Samuel \"Sammy\" Rocha"
+      ],
+      "member_roles": [
+        "Voz y Acordeón",
+        "Bajo Sexto y Segunda Voz",
+        "Bajo Eléctrico",
+        "Batería"
+      ],
+      "member_shares_bps": [
+        2500,
+        2500,
+        2500,
+        2500
+      ],
+      "song_title": "Dos Cartas Viejas",
+      "song_price_mxn_cents": 900,
+      "audio_file": "dos_cartas_viejas_mix2.mp3",
+      "author_indexes": [
+        0,
+        1
+      ],
+      "author_shares_bps": [
+        5000,
+        5000
+      ],
+      "content_hash": ""
+    },
+    {
+      "name": "Grupo Alianza 614",
+      "genre": "Norteño Versátil",
+      "region": "Chihuahua, Chih. (Capital)",
+      "description": "Banda que domina el norteño y tejano, pero con capacidad para tocar pop y rock en inglés cuando la fiesta lo exige.",
+      "fee_mxn": 19500,
+      "event_types": [
+        "Graduaciones",
+        "bodas de gala",
+        "eventos empresariales",
+        "salones de eventos"
+      ],
+      "member_names": [
+        "Brenda \"La Chispa\" Delgado",
+        "Omar Fuentes",
+        "Alan Gutiérrez",
+        "Ricardo Pineda",
+        "Cristian Mora"
+      ],
+      "member_roles": [
+        "Voz Principal Femenina",
+        "Voz Principal Masculina y Bajo Sexto",
+        "Teclados y Acordeón",
+        "Bajo Eléctrico",
+        "Batería y Secuencias"
+      ],
+      "member_shares_bps": [
+        2500,
+        2500,
+        2000,
+        1500,
+        1500
+      ],
+      "song_title": "Popurrí 614 (Norteño-Tejano)",
+      "song_price_mxn_cents": 2500,
+      "audio_file": "popurri_614_envivo.wav",
+      "author_indexes": [
+        0,
+        1,
+        2
+      ],
+      "author_shares_bps": [
+        6000,
+        2000,
+        2000
+      ],
+      "content_hash": ""
+    }
+  ]
+}
