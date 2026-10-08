@@ -1,0 +1,147 @@
+{
+  "bands": {
+    "1": {
+      "band_id": 1,
+      "content_hash": "0xda1af5a28521626ca5a57379b035dbae48bd57c40233051cd7b0db9a63f90032",
+      "index_in_bands_json": 0,
+      "member_wallets": [
+        "0xCA3F30412bD6E646fc9730f4b69495AD99A5cD5B",
+        "0x30d9244A9Ac44Bb88fA7Df380E799C5De4241D1b",
+        "0x7101ceC8a8deD78d85452E32810e1fDE81f6e085",
+        "0x34577614Fa49DEd64780f88346717520BDcfE0c8",
+        "0xB64dAc400703Ac2F13D924777c51Bf33C3BfA0C1"
+      ],
+      "name": "Conjunto Río Sacramento",
+      "work_id": 1
+    },
+    "10": {
+      "band_id": 10,
+      "content_hash": "0x4c5f8d440cef96eda996be28a0ddaf53f673ec01e32448c689300c0cbfe4c5f2",
+      "index_in_bands_json": 9,
+      "member_wallets": [
+        "0x8efc1dFAAD7aa04B7710048ccF0a5d2Ae4398f55",
+        "0xb18FC2C968186472e4590E370Bb968007859af31",
+        "0x3618A5Bf3c7d9E3cD0a35774739666cee245e2e9",
+        "0x1008CfC355A0ba8c1DB2503134Cd532DBb6b38aF",
+        "0x7EE2275359870C4C7ce2a356Eeb412B44FcE3143"
+      ],
+      "name": "Grupo Alianza 614",
+      "work_id": 10
+    },
+    "2": {
+      "band_id": 2,
+      "content_hash": "0xe77a1479a17c533c171057485f66cd683bea8d2d7d2d089cc546b61ffb95db38",
+      "index_in_bands_json": 1,
+      "member_wallets": [
+        "0xDB503D634995c6feA17E4C192fE021E2C9a23F36",
+        "0x74032B2C4043F08EDe8356249c4e537c5745Df1b",
+        "0xf4C3BB09E7c69209d3280a25DA949F677f2Fd414"
+      ],
+      "name": "Los Plebes del Cerro Grande",
+      "work_id": 2
+    },
+    "3": {
+      "band_id": 3,
+      "content_hash": "0xcc44edd78f200c5295f09f718c72d6c35845ec332e68f2a8a472b1205430f454",
+      "index_in_bands_json": 2,
+      "member_wallets": [
+        "0x3852c9f0aD57dAE1772F487A02FCa13575D08Fb8",
+        "0x5EF537b7b24D84438B7f7C43829903A4A920dd0C",
+        "0x22af7f3b6d27A1D8Aa8BbfB68FCd732dABd1Eb2A",
+        "0x2368f86cc47824E32031536c377Dd33ab09cf344",
+        "0x1938e89Fa0E6be81C8A6f466a27F55dC79F73436"
+      ],
+      "name": "Banda La Calicanto",
+      "work_id": 3
+    },
+    "4": {
+      "band_id": 4,
+      "content_hash": "0x99fb4ffc635be3894237ae0849edba0965e4476c73eed3f07b507bcb3cbeef16",
+      "index_in_bands_json": 3,
+      "member_wallets": [
+        "0xAF512f95Ef564AaC920b0B76FCD2ac609aD8493F",
+        "0x4Fc136114168ce12C9373938505F8c266a1A328c",
+        "0x2b8Ce26F38A57E69e78e69f80ffa357aC189E783",
+        "0x0A1057C9c2DB33503C3a944aF81ff33addc1c55D",
+        "0x3909bE5c5a453FdDC36480826572F3A1999E5352"
+      ],
+      "name": "Los Reyes de la 20",
+      "work_id": 4
+    },
+    "5": {
+      "band_id": 5,
+      "content_hash": "0x1d04265b159eb6677da9edbd76c3eedb83aeef52c84afbacc2f5b764b228f0ff",
+      "index_in_bands_json": 4,
+      "member_wallets": [
+        "0xced9C25AF4070BF42c8553073f3FF59513d6c89c",
+        "0x7923B070EcebbCbe8bdd7b461E73f89BD713a56C",
+        "0x5BCA0dbf278E58912DB47b1f572272D1bfCaF6cB",
+        "0x7e2faC449c2AdbA8Cc759047842189d40e464287"
+      ],
+      "name": "Rodeo 614",
+      "work_id": 5
+    },
+    "6": {
+      "band_id": 6,
+      "content_hash": "0x5d610f231a2d5feaac5ba31a9e1039989eb7f162a8de85838e81e36080174746",
+      "index_in_bands_json": 5,
+      "member_wallets": [
+        "0xC007a94EE1Ed2Fd1a372Eb999F8B0dc7c2579b1b",
+        "0xA0FeA6F5926389EBF2497E4262401c19AC9D5920",
+        "0x92e3c9a03f1c6C40aC2076887908d252CA0e9022",
+        "0xC51580AedAb94E8D5BCB5f6E237B62F9567FE87C",
+        "0x652dAA2076ce937741fde568Bb3cE880C0740432",
+        "0xd5d91FEd7520Ba66c910771Aa336F179b53B2451"
+      ],
+      "name": "Escuadrón del Desierto",
+      "work_id": 6
+    },
+    "7": {
+      "band_id": 7,
+      "content_hash": "0xd435a29da8696c8da7a67575f378a466914461fc82b8763b630279e22bc68bff",
+      "index_in_bands_json": 6,
+      "member_wallets": [
+        "0x059CEd17004A9b31552C214521aB99223529Ce15",
+        "0xF242Bc73272A36e9BF7A386242410CC0b99dEaA2",
+        "0x05d43738f262bbEFB848bFaE0b689226a1f9fE1C",
+        "0x3c57DC7A34D7241497DAa4E9c0Ba6b536EAea696",
+        "0xE477b6Dfd62e0bB338e9B7cFeacbCfBe77F2d10f",
+        "0xe4990565c46f867B1691fc1d1965c8DA7fE58053"
+      ],
+      "name": "Mariachi Los Dorados",
+      "work_id": 7
+    },
+    "8": {
+      "band_id": 8,
+      "content_hash": "0xa8bc7ecd5bfae785a329f90b9aeb2b912063761954e80d819da12f14d11b5c2f",
+      "index_in_bands_json": 7,
+      "member_wallets": [
+        "0x4A3017ABb2808593c147Ca9edD838d3413313864",
+        "0xC52423bb3DDa5F8E018bFd393A17bA1692701509",
+        "0x84e8d20F73162D89B2f6Ee8372eb4FAAB5747CF4",
+        "0x78E121d3498F9c391503b1e74Ff49E84DD732617"
+      ],
+      "name": "Los de la Cantera",
+      "work_id": 8
+    },
+    "9": {
+      "band_id": 9,
+      "content_hash": "0x659f614288180246fcae9bae285f603f67920f1fd87c6f382a7cf04e4851e371",
+      "index_in_bands_json": 8,
+      "member_wallets": [
+        "0x4c5a5a00e8c6d3fBe9c2184F190502E9839bD0aE",
+        "0x7B374C7a88CB6E7727C41a728DA976af03dA81EB",
+        "0x7Fa4EFE32c736718Bbc38aC7Cd829DBE3EBCA35d",
+        "0x966b014F09bB834bEcb1a3AbfAC58B001f77eb9c"
+      ],
+      "name": "Los Cardenales del Chuviscar",
+      "work_id": 9
+    }
+  },
+  "bookingEndingSoon": 1,
+  "bookingFuture": 2,
+  "chainId": 84532,
+  "operator": "0x1CF99e2eB8d092aAD8008F307521E20BC25EBd0e",
+  "proposalId": 1,
+  "rate": "1 MXN = 0.00000001 ETH"
+}
