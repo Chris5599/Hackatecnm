@@ -1,0 +1,65 @@
+{
+  "_instrucciones": "Fotos libres de derechos de Unsplash (Unsplash License). cover = foto grande, avatar = foto chica. Para cambiar una, reemplaza su URL. Las bandas con cover vacío no se tocan.",
+  "bandas": [
+    {
+      "id": "conjunto-rio-sacramento",
+      "nombre": "Conjunto Río Sacramento",
+      "cover": "https://images.unsplash.com/photo-1503853585905-d53f628e46ac?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1503853585905-d53f628e46ac?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "los-plebes-del-cerro-grande",
+      "nombre": "Los Plebes del Cerro Grande",
+      "cover": "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "banda-la-calicanto",
+      "nombre": "Banda La Calicanto",
+      "cover": "https://images.unsplash.com/photo-1640262653844-67aa2fe7fdb4?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1640262653844-67aa2fe7fdb4?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "los-reyes-de-la-20",
+      "nombre": "Los Reyes de la 20",
+      "cover": "https://images.unsplash.com/photo-1522796663327-2946cde45d6d?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1522796663327-2946cde45d6d?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "rodeo-614",
+      "nombre": "Rodeo 614",
+      "cover": "https://images.unsplash.com/photo-1647647460670-e731134eb1d8?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1647647460670-e731134eb1d8?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "escuadron-del-desierto",
+      "nombre": "Escuadrón del Desierto",
+      "cover": "https://images.unsplash.com/photo-1675428405584-4fc8920ca384?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1675428405584-4fc8920ca384?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "mariachi-los-dorados",
+      "nombre": "Mariachi Los Dorados",
+      "cover": "https://images.unsplash.com/photo-1654576205088-6503ad4ffb72?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1654576205088-6503ad4ffb72?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "los-de-la-cantera",
+      "nombre": "Los de la Cantera",
+      "cover": "https://images.unsplash.com/photo-1595971294624-80bcf0d7eb24?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1595971294624-80bcf0d7eb24?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "los-cardenales-del-chuviscar",
+      "nombre": "Los Cardenales del Chuviscar",
+      "cover": "https://images.unsplash.com/photo-1724101541309-578ff3bffd9a?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1724101541309-578ff3bffd9a?auto=format&fit=crop&w=200&h=200&q=75"
+    },
+    {
+      "id": "grupo-alianza-614",
+      "nombre": "Grupo Alianza 614",
+      "cover": "https://images.unsplash.com/photo-1632054553195-bfd7034fee25?auto=format&fit=crop&w=800&h=500&q=75",
+      "avatar": "https://images.unsplash.com/photo-1632054553195-bfd7034fee25?auto=format&fit=crop&w=200&h=200&q=75"
+    }
+  ]
+}
