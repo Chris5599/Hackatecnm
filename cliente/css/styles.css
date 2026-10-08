@@ -1129,6 +1129,14 @@ button.song-tag:disabled { opacity: 0.6; }
 .vault-id b { display: block; font-weight: 700; }
 .vault-id small { font-size: 0.75rem; color: var(--muted); }
 .vault-amt { font-size: 1.125rem; font-weight: 600; }
+.vault-list { list-style: none; margin: 0.875rem 0 0; padding: 0; display: grid; gap: 0.5rem; }
+.vault-list li { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; background: #fff; border-radius: 0.75rem; padding: 0.625rem 0.75rem; }
+.vault-row-main { min-width: 0; display: flex; flex-direction: column; }
+.vault-row-main b { font-size: 0.8125rem; font-weight: 600; }
+.vault-row-main small { font-size: 0.75rem; color: var(--muted); }
+.vault-row-side { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 0.125rem; }
+.vault-row-side span { font-size: 0.8125rem; font-weight: 600; }
+.vault-row-side a { font-size: 0.6875rem; }
 .vault > p { margin-top: 0.75rem; font-size: 11px; line-height: 1.65; color: var(--muted); }
 .menu {
   margin-top: 1rem;

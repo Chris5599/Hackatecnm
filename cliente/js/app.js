@@ -389,13 +389,6 @@
               ${signup ? "¿Ya tienes cuenta?" : "¿Aún no tienes cuenta?"}
               <button type="button" class="link-strong" data-action="switch-mode">${signup ? "Inicia sesión" : "Crea una"}</button>
             </p>
-            ${
-              a.role === "cliente"
-                ? `<button type="button" class="link-muted" data-action="guest" ${busy ? "disabled" : ""}>
-                    ${a.loading === "guest" ? "Entrando…" : "Continuar como invitado"}
-                  </button>`
-                : ""
-            }
           </div>
 
           <p class="legal">Al continuar aceptas los Términos de uso y la Política de privacidad.</p>
@@ -1612,7 +1605,10 @@
 
   function perfilHTML() {
     const initial = S.userName.trim().charAt(0).toUpperCase() || "S";
-    const vault = S.bookings.filter(isUpcoming).reduce((sum, b) => sum + b.total, 0);
+    const vaultItems = S.bookings
+      .filter((b) => isUpcoming(b) && b.txHash)
+      .sort((x, y) => (x.eventDate + x.time).localeCompare(y.eventDate + y.time));
+    const vault = vaultItems.reduce((sum, b) => sum + b.total, 0);
     const menu = [
       { icon: "credit-card", label: "Métodos de pago" },
       { icon: "bell", label: "Notificaciones" },
@@ -1633,11 +1629,28 @@
         <div class="vault-top">
           <div class="vault-id">
             <div class="vault-ic">${icon("shield-check", 22)}</div>
-            <div><b>Bóveda segura</b><small>Tu dinero protegido</small></div>
+            <div><b>Bóveda segura</b><small>${
+              vaultItems.length
+                ? `${vaultItems.length} ${vaultItems.length === 1 ? "reserva protegida" : "reservas protegidas"}`
+                : "Sin pagos en resguardo"
+            }</small></div>
           </div>
           <p class="vault-amt">${mxn(vault)}</p>
         </div>
-        <p>Los pagos de tus reservas se guardan aquí hasta que cada evento finalice.</p>
+        ${
+          vaultItems.length
+            ? `<ul class="vault-list">${vaultItems
+                .map(
+                  (b) => `<li>
+                <div class="vault-row-main"><b class="truncate">${esc(b.bandName)}</b><small>${esc(dayLabel(b.eventDate))} · ${esc(b.time)} h</small></div>
+                <div class="vault-row-side"><span>${mxn(b.total)}</span>
+                  <a class="link-strong" href="${esc(chainTxUrl(b.txHash))}" target="_blank" rel="noopener">Ver en Basescan</a></div>
+              </li>`
+                )
+                .join("")}</ul>
+              <p>La banda aún no recibe este dinero: se libera hasta que el evento termine. Si no se presenta, tu pago sigue aquí.</p>`
+            : `<p>Cuando reserves una banda, tu pago quedará guardado aquí hasta que termine el evento.</p>`
+        }
       </div>
 
       ${mySongsHTML()}
