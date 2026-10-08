@@ -10,7 +10,7 @@
   // =====================================================================
   const CFG = window.SONORA_CONFIG;
   const SHARE = CFG.ARTIST_SHARE ?? 0.95;
-  const COOP = CFG.COOP_NAME || "Cooperación Sonora";
+  const COOP = CFG.COOP_NAME || "Cooperación SoundOra";
   const CHAIN = CFG.BLOCKCHAIN || { name: "blockchain", txUrl: "", addressUrl: "" };
   const DAYS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
   const DAY_SHORT = ["L", "M", "Mi", "J", "V", "S", "D"];
@@ -122,7 +122,7 @@
       ${demoBanner()}
       <header class="top">
         <div class="top-inner">
-          <div class="brand">${icon("music", 18)}<span>sonora</span><small>artistas</small></div>
+          <div class="brand">${icon("music", 18)}<span>SoundOra</span><small>artistas</small></div>
           <div class="top-band">
             <div class="top-band-text">
               <b class="truncate">${esc(S.band.name)}</b>
@@ -197,9 +197,9 @@
     ${demoBanner()}
     <div class="setup">
       <div class="setup-box">
-        <div class="brand">${icon("music", 18)}<span>sonora</span><small>artistas</small></div>
+        <div class="brand">${icon("music", 18)}<span>SoundOra</span><small>artistas</small></div>
         <h1>${isNew ? "Da de alta a tu banda" : "Datos de la banda"}</h1>
-        <p class="muted">${isNew ? "Así te verán los clientes en Sonora. Puedes cambiarlo después." : "Los cambios se reflejan de inmediato en la app de clientes."}</p>
+        <p class="muted">${isNew ? "Así te verán los clientes en SoundOra. Puedes cambiarlo después." : "Los cambios se reflejan de inmediato en la app de clientes."}</p>
         <form id="band-form" class="form" novalidate>
           <label class="field"><span>Nombre de la banda</span><input name="name" class="input" maxlength="60" value="${esc(b.name)}" required></label>
           <div class="row-2">

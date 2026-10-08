@@ -66,7 +66,7 @@
 
   // ---------- Reparto del dinero ----------
   const SHARE = window.SONORA_CONFIG.ARTIST_SHARE ?? 0.95;
-  const COOP_NAME = window.SONORA_CONFIG.COOP_NAME || "Cooperación Sonora";
+  const COOP_NAME = window.SONORA_CONFIG.COOP_NAME || "Cooperación SoundOra";
   const pct = (x) => Math.round(x * 100) + "%";
   /** Divide un monto: 95 % para la banda y 5 % para la cooperación */
   function split(amount) {
@@ -281,7 +281,7 @@
   }
 
   function wordmark(light = false) {
-    return `<div class="wordmark ${light ? "light" : ""}">${icon("music", 20)}<span>sonora</span></div>`;
+    return `<div class="wordmark ${light ? "light" : ""}">${icon("music", 20)}<span>SoundOra</span></div>`;
   }
 
   function renderOnboarding() {
@@ -292,8 +292,35 @@
     app.innerHTML = `
     <div class="auth">
       <aside class="auth-aside">
+        <div class="eq" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<i style="--i:${i}"></i>`).join("")}</div>
         ${wordmark(true)}
-        <p class="auth-claim">La música de tu evento, directo con las bandas locales.</p>
+
+        <div class="auth-hero">
+          <p class="auth-eyebrow">Cooperativa musical · Chihuahua</p>
+          <p class="auth-claim">La música de tu evento, directo con las bandas locales.</p>
+          <p class="auth-sub">Reserva, paga y compra música sin intermediarios. Lo que pagas llega a quienes la hacen.</p>
+
+          <ul class="auth-feats">
+            <li>
+              <span class="feat-ico">${icon("shield-check", 18)}</span>
+              <div><b>Pago protegido</b><small>Tu dinero queda en resguardo y se libera a la banda después del evento.</small></div>
+            </li>
+            <li>
+              <span class="feat-ico">${icon("music", 18)}</span>
+              <div><b>95% para la banda</b><small>Solo el 5% sostiene la cooperativa. Cada integrante recibe su parte.</small></div>
+            </li>
+            <li>
+              <span class="feat-ico">${icon("file-text", 18)}</span>
+              <div><b>Obras registradas</b><small>Cada canción con prueba de autoría y regalías para sus autores.</small></div>
+            </li>
+          </ul>
+        </div>
+
+        <dl class="auth-stats">
+          <div><dt>10</dt><dd>bandas locales</dd></div>
+          <div><dt>95%</dt><dd>para el artista</dd></div>
+          <div><dt>0</dt><dd>intermediarios</dd></div>
+        </dl>
       </aside>
 
       <section class="auth-main">
@@ -306,8 +333,8 @@
               : ""
           }
 
-          <p class="role-q">¿Cómo quieres usar Sonora?</p>
-          <div class="role-pick" role="radiogroup" aria-label="¿Cómo quieres usar Sonora?">
+          <p class="role-q">¿Cómo quieres usar SoundOra?</p>
+          <div class="role-pick" role="radiogroup" aria-label="¿Cómo quieres usar SoundOra?">
                     <button type="button" class="role-opt ${a.role === "cliente" ? "on" : ""}" data-action="pick-role" data-role="cliente" role="radio" aria-checked="${a.role === "cliente"}">
                       ${icon("calendar-days", 18)}<b>Quiero contratar</b><small>Reservar bandas y comprar música</small>
                     </button>
@@ -356,12 +383,6 @@
             </button>
           </form>
 
-          <div class="divider">o</div>
-
-          <button type="button" class="btn-google" data-action="google" ${busy ? "disabled" : ""}>
-            ${a.loading === "google" ? icon("loader", 18, "spin") : GOOGLE_SVG}
-            Continuar con Google
-          </button>
 
           <div class="auth-links">
             <p class="muted">
@@ -462,7 +483,7 @@
       <div class="desk-nav-inner">
         <div class="brand-mark">
           <span class="brand-badge">${icon("music", 18, "fill-white")}</span>
-          <span class="brand-name">sonora</span>
+          <span class="brand-name">SoundOra</span>
         </div>
         <nav class="pill-tabs" aria-label="Secciones">
           ${TABS.map(
@@ -651,7 +672,7 @@
         <h3>${esc(b.name)}</h3>
         <p class="rec-genre">${esc(b.genre)} · ${b.yearsActive} años · ${b.successfulEvents} eventos</p>
         <p class="rec-meta">
-          ${b.reviews ? `${icon("star", 13, "fill-white")} <b>${b.rating.toFixed(1)}</b> (${b.reviews})` : `<b class="rec-new">Nueva en Sonora</b>`}
+          ${b.reviews ? `${icon("star", 13, "fill-white")} <b>${b.rating.toFixed(1)}</b> (${b.reviews})` : `<b class="rec-new">Nueva en SoundOra</b>`}
           <span class="rec-dot">·</span>
           <span>${mxn(b.hourlyRate)} / hora</span>
         </p>
@@ -752,7 +773,7 @@
             <div class="band-info">
               <h1 class="h1">${esc(band.name)}</h1>
               <p class="sub">${esc(band.genre)} · ${band.yearsActive} años · ${band.successfulEvents} eventos</p>
-              ${band.reviews ? starsHTML(band.rating, 13, band.reviews) : `<p class="sub brand" style="font-weight:600">Nueva en Sonora</p>`}
+              ${band.reviews ? starsHTML(band.rating, 13, band.reviews) : `<p class="sub brand" style="font-weight:600">Nueva en SoundOra</p>`}
               <p class="bio">${esc(band.bio)}</p>
             </div>
 

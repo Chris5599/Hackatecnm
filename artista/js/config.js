@@ -9,7 +9,7 @@ SUPABASE_ANON_KEY: "sb_publishable_zeV55tBIUrke0V-Q3Av1uA_zXKJl6AB",
 
   // Reparto de cada pago: 95 % para la banda, el resto a la cooperación
   ARTIST_SHARE: 0.95,
-  COOP_NAME: "Cooperación Sonora",
+  COOP_NAME: "Cooperación SoundOra",
 
   // Explorador de bloques para la trazabilidad
   BLOCKCHAIN: {

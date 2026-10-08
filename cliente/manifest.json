@@ -1,6 +1,6 @@
 {
-  "name": "Sonora",
-  "short_name": "Sonora",
+  "name": "SoundOra",
+  "short_name": "SoundOra",
   "description": "Descubre y reserva bandas locales para tu evento.",
   "start_url": "./",
   "display": "standalone",

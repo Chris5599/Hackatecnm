@@ -1,5 +1,5 @@
 /**
- * Web3 · Conexión de Sonora con los smart contracts en Base Sepolia.
+ * Web3 · Conexión de SoundOra con los smart contracts en Base Sepolia.
  * Requiere: ethers v6 (CDN) y js/config.js (bloque WEB3).
  *
  * Archivos que lee (carpeta abi/ en la raíz del repo):
