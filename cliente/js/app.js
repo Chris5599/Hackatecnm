@@ -167,6 +167,7 @@
     buyingSongId: null,
     playingSongId: null,
     cancelingId: null,
+    releasingId: null,
 
     selectedBandId: null,
     bandTab: "contratar",
@@ -857,6 +858,12 @@
         <div class="sum-row"><span class="lab">Total del evento</span><b>${mxn(r.total)}</b></div>
         ${splitRowsHTML(r.total, r.bandName)}
       </div>
+      ${
+        r.txUrl
+          ? `<p class="sum-note" style="text-align:center">${icon("shield-check", 13)} Pago registrado en blockchain ·
+              <a class="link-strong" href="${esc(r.txUrl)}" target="_blank" rel="noopener">Ver en Basescan</a></p>`
+          : ""
+      }
       <div class="actions">
         <button class="btn-primary" data-action="view-reservas">Ver mis reservas</button>
         <button class="btn-secondary" data-action="close-sheet-home">Volver al inicio</button>
@@ -897,6 +904,24 @@
         hours: sh.hours,
         address: sh.address.trim(),
       });
+      // Pago en blockchain: el dinero queda bloqueado en el contrato BookingEscrow
+      if (window.SonoraWeb3?.enabled && (await SonoraWeb3.available(band.name))) {
+        try {
+          const chain = await SonoraWeb3.reservar({
+            bandName: band.name,
+            eventDate: booking.eventDate,
+            time: booking.time,
+            totalMXN: booking.total,
+          });
+          await API.setBookingTx(booking.id, chain.txHash);
+          booking.txHash = chain.txHash;
+          booking.txUrl = chain.url;
+        } catch (chainErr) {
+          // Si el pago no se completó, la reserva no se queda apartada
+          await API.cancelBooking(booking.id).catch(() => {});
+          throw chainErr;
+        }
+      }
       S.bookings = [...S.bookings, booking].sort((a, b) => a.eventDate.localeCompare(b.eventDate));
       sh.result = booking;
       sh.step = "success";
@@ -971,6 +996,15 @@
             </div>
             <p class="bk-split">${mxn(split(b.total).artist)} para la banda · ${mxn(split(b.total).coop)} ${esc(COOP_NAME)}</p>
             ${
+              b.txHash
+                ? `<p class="bk-split">${icon("shield-check", 11)} En bóveda blockchain ·
+                    <a class="link-strong" href="${esc(chainTxUrl(b.txHash))}" target="_blank" rel="noopener">Ver pago</a></p>
+                  <button class="cancel-btn" data-action="release-booking" data-id="${esc(b.id)}" ${S.releasingId === b.id ? "disabled" : ""}>
+                    ${S.releasingId === b.id ? icon("loader", 13, "spin") + " Liberando…" : icon("check", 13) + " El evento terminó: liberar pago a la banda"}
+                  </button>`
+                : ""
+            }
+            ${
               up
                 ? `<button class="cancel-btn" data-action="cancel-booking" data-id="${esc(b.id)}" ${S.cancelingId === b.id ? "disabled" : ""}>
                     ${S.cancelingId === b.id ? icon("loader", 13, "spin") + " Cancelando…" : icon("trash", 13) + " Cancelar reserva"}
@@ -982,6 +1016,29 @@
           .join("")}
       </div>
     </div>`;
+  }
+
+  /** URL del explorador de bloques para un hash (coincide con abi/addresses.json) */
+  function chainTxUrl(hash) {
+    return "https://sepolia.basescan.org/tx/" + hash;
+  }
+
+  async function releaseBooking(id) {
+    const b = S.bookings.find((x) => x.id === id);
+    if (!b || !b.txHash || S.releasingId || !window.SonoraWeb3?.enabled) return;
+    if (!confirm(`¿Confirmas que ${b.bandName} ya se presentó? El pago se repartirá a sus integrantes.`)) return;
+    S.releasingId = id;
+    renderScreen();
+    try {
+      const r = await SonoraWeb3.confirmarPorTx(b.txHash);
+      toast("¡Pago liberado y repartido a los integrantes!");
+      window.open(r.url, "_blank", "noopener");
+    } catch (err) {
+      toast(err.message, true);
+    } finally {
+      S.releasingId = null;
+      renderScreen();
+    }
   }
 
   async function cancelBooking(id) {
@@ -1140,10 +1197,17 @@
     renderSongSheet();
     renderBand();
     try {
-      await API.buySong(songId);
+      let chain = null;
+      const band = bandById(S.selectedBandId);
+      const song = band?.songs.find((s) => s.id === songId);
+      if (window.SonoraWeb3?.enabled && band && song) {
+        chain = await SonoraWeb3.comprar({ bandName: band.name, songTitle: song.title });
+      }
+      await API.buySong(songId, chain?.txHash);
       S.purchased.add(songId);
       S.songSheet = null;
-      toast("¡Canción agregada a tu colección!");
+      toast(chain ? "¡Canción comprada! Las regalías ya llegaron a los autores." : "¡Canción agregada a tu colección!");
+      if (chain) window.open(chain.url, "_blank", "noopener");
     } catch (err) {
       ss.step = "confirm";
       ss.error = err.message;
@@ -1402,6 +1466,9 @@
       // --- Reservas / Perfil ---
       case "cancel-booking":
         cancelBooking(id);
+        break;
+      case "release-booking":
+        releaseBooking(id);
         break;
       case "soon":
         toast("Disponible próximamente.");

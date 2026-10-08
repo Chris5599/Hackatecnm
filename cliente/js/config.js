@@ -11,4 +11,11 @@ SUPABASE_ANON_KEY: "sb_publishable_zeV55tBIUrke0V-Q3Av1uA_zXKJl6AB",
   // Reparto de cada pago: 95 % para la banda o artista, el resto a la cooperación
   ARTIST_SHARE: 0.95,
   COOP_NAME: "Cooperación Sonora",
+
+  // Pagos con smart contracts en Base Sepolia (js/web3.js)
+  WEB3: {
+    ENABLED: true,
+    ABI_PATH: "../abi/",            // carpeta abi/ en la raíz del repo
+    WEI_PER_MXN: "10000000000",     // tasa simbólica de testnet: 1 MXN = 0.00000001 ETH
+  },
 };

@@ -54,6 +54,7 @@
       address: row.address,
       total: row.total,
       status: row.status,
+      txHash: row.tx_hash || null,
     };
   }
 
@@ -224,6 +225,11 @@
         save(db);
         return mapBooking(row);
       },
+      async setBookingTx(id, txHash) {
+        const b = db.bookings.find((x) => x.id === id);
+        if (b) b.tx_hash = txHash;
+        save(db);
+      },
       async cancelBooking(id) {
         const b = db.bookings.find((x) => x.id === id && x.user_id === uid());
         if (b) b.status = "cancelada";
@@ -233,7 +239,7 @@
       async getPurchasedSongIds() {
         return db.purchases.filter((p) => p.user_id === uid()).map((p) => p.song_id);
       },
-      async buySong(songId) {
+      async buySong(songId, txHash) {
         await wait(900);
         if (db.purchases.some((p) => p.user_id === uid() && p.song_id === songId)) {
           throw new Error("Ya tienes esta canción.");
@@ -336,6 +342,10 @@
       );
       return mapBooking(data);
     },
+    /** Guarda el hash del pago en blockchain (función set_booking_tx de Supabase) */
+    async setBookingTx(id, txHash) {
+      await run(sb.rpc("set_booking_tx", { p_booking_id: id, p_tx_hash: txHash }));
+    },
     async cancelBooking(id) {
       await run(sb.from("bookings").update({ status: "cancelada" }).eq("id", id));
     },
@@ -345,8 +355,10 @@
       const data = await run(sb.from("song_purchases").select("song_id"));
       return data.map((r) => r.song_id);
     },
-    async buySong(songId) {
-      await run(sb.from("song_purchases").insert({ song_id: songId }));
+    async buySong(songId, txHash) {
+      const row = { song_id: songId };
+      if (txHash) row.tx_hash = txHash;
+      await run(sb.from("song_purchases").insert(row));
     },
   };
 })();

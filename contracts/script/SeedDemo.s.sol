@@ -58,7 +58,7 @@ contract SeedDemo is Script {
         console.log("Reserva que termina en 2 min:", bookingSoon);
         console.log("Reserva a 30 dias:", bookingLater);
         console.log("Votacion:", proposalId);
-        console.log("Escrito web/src/abi/demo-data.json");
+        console.log("Escrito abi/demo-data.json");
     }
 
     function _loadBand(uint256 i) private {
