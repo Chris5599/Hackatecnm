@@ -4,8 +4,8 @@
  * Supabase → Project Settings → API: Project URL y anon public key.
  */
 window.SONORA_CONFIG = {
-  SUPABASE_URL: "https://TU-PROYECTO.supabase.co",
-  SUPABASE_ANON_KEY: "TU-ANON-KEY",
+ SUPABASE_URL: "https://sqgjyqarhwwvdskhczlt.supabase.co",
+SUPABASE_ANON_KEY: "sb_publishable_zeV55tBIUrke0V-Q3Av1uA_zXKJl6AB",
 
   // Reparto de cada pago: 95 % para la banda, el resto a la cooperación
   ARTIST_SHARE: 0.95,
@@ -13,8 +13,8 @@ window.SONORA_CONFIG = {
 
   // Explorador de bloques para la trazabilidad
   BLOCKCHAIN: {
-    name: "Polygon Amoy",
-    txUrl: "https://amoy.polygonscan.com/tx/",
-    addressUrl: "https://amoy.polygonscan.com/address/",
-  },
+  name: "Base Sepolia",
+  txUrl: "https://sepolia.basescan.org/tx/",
+  addressUrl: "https://sepolia.basescan.org/address/",
+},
 };
